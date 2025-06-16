@@ -1,9 +1,8 @@
 import React from 'react';
-import { useAuth } from './Contexts/AuthContext';
-import { AuthProvider } from './Contexts/AuthContext';
-import { TodosProvider } from './Contexts/TodosContext';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
+import { TodosProvider } from './contexts/TodosContext';
 import Login from './Components/Login';
-import TodoApp from './Components/TodoApp';
+import TodoApp from './components/TodoApp';
 
 const AppContent = () => {
   const { isAuthenticated, isLoading } = useAuth();
