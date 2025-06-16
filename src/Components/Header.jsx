@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header className="p-4 bg-blue-600 text-white flex justify-between">
-      <h1>My App</h1>
+      <h1>What To Do?</h1>
       <nav className="space-x-4">
         {isLoggedIn ? (
           <>
