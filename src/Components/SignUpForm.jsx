@@ -21,13 +21,14 @@ const SignUpForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 max-w-md mx-auto">
-      <h2 className="text-xl mb-4">Sign Up</h2>
-      {error && <p className="text-red-500">{error}</p>}
-      <input className="block w-full mb-2" type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required />
-      <input className="block w-full mb-2" type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required />
-      <button className="bg-green-500 text-white px-4 py-2" type="submit">Sign Up</button>
-    </form>
+    <form onSubmit={handleSubmit}>
+  <h2>SignUp</h2>
+  {error && <p className="error-message">{error}</p>}
+  <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />
+  <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required />
+  <button type="submit">SignUp</button>
+</form>
+
   );
 };
 
