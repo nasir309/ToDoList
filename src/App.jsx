@@ -1,35 +1,22 @@
-import React from 'react';
-import { AuthProvider, useAuth } from './contexts/AuthContext';
-import { TodosProvider } from './contexts/TodosContext';
-import Login from './Components/Login';
-import TodoApp from './components/TodoApp';
-
-const AppContent = () => {
-  const { isAuthenticated, isLoading } = useAuth();
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
-      </div>
-    );
-  }
-
-  return isAuthenticated ? (
-    <TodosProvider>
-      <TodoApp />
-    </TodosProvider>
-  ) : (
-    <Login />
-  );
-};
+import React from 'react'
+import { TaskProvider } from './Context/TaskContext' 
+import TaskForm from './Components/TaskForm'
+import TaskList from './Components/TaskList'
+import './index.css'
 
 function App() {
   return (
-    <AuthProvider>
-      <AppContent />
-    </AuthProvider>
-  );
+    
+    <TaskProvider>
+      <div className="container mx-auto p-4 max-w-2xl bg-gray-50 min-h-screen rounded-lg shadow-xl my-8">
+        <h1 className="text-4xl font-extrabold text-center text-blue-700 mb-8">
+          To-Do List
+        </h1>
+        <TaskForm />
+        <TaskList />
+      </div>
+    </TaskProvider>
+  )
 }
 
-export default App;
+export default App
