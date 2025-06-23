@@ -1,3 +1,4 @@
+
 /* styles.css */
 
 body {
@@ -88,3 +89,8 @@ button[type="submit"]:hover {
   max-width: 800px;
   margin: auto;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
