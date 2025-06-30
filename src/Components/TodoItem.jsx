@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Check, Edit3, Trash2, X, Save } from 'lucide-react';
-import { useTasks } from './Contexts/TaskContext';
+
 
 const TodoItem = ({ todo }) => {
   const [isEditing, setIsEditing] = useState(false);
